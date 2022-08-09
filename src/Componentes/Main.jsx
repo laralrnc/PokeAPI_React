@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import InfoPokemon from "./InfoPokemon";
+import axios from "axios";
 
 const Main = () => {
     return (
@@ -10,8 +11,8 @@ const Main = () => {
                     <Card />
                     <Card />
                     <div className="btn-page">
-                        <button>Anterior</button>
-                        <button>Próxima</button>
+                        <button className="btn-hover">Anterior</button>
+                        <button className="btn-hover" >Próxima</button>
                     </div>
                 </div>
                 <div className="card-poke">
