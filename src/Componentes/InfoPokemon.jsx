@@ -16,6 +16,7 @@ const InfoPokemon = () => {
             </div>
             <div className="status">
                 <div>
+                    
                     <ProgressBar className="containerP" completed={30} customLabel="HP" />
                     <ProgressBar className="containerP" completed={30} customLabel="Ataque" />
                     <ProgressBar className="containerP" completed={30} customLabel="Defesa" />
