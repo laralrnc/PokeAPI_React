@@ -29,6 +29,7 @@ const Main = () => {
 
             setPokeData(state=>{
                 state=[...state,result.data]
+                state.sort((a,b) => a.id>b.id?1:1)
                 return state;
             })
         })
@@ -43,14 +44,15 @@ const Main = () => {
         <>
             <div className="container">
                 <div className="lista-poke">
-                    <Card pokemon = {pokeData} loading={loading} />
+                    <Card pokemon = {pokeData} loading={loading} 
+                    PokeInfo ={poke=> setPokeDex(poke)} />
                     <div className="btn-page">
                         <button className="btn-hover">Anterior</button>
                         <button className="btn-hover" >Próxima</button>
                     </div>
                 </div>
                 <div className="card-poke">
-                    <InfoPokemon />
+                    <InfoPokemon data={pokeDex} />
                 </div>
             </div>
         </>
