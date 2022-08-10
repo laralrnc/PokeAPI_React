@@ -5,28 +5,35 @@ const InfoPokemon = ({ data }) => {
     return (
         <>
             {
-            (!data) ? "" : (
-                <>
-                    <h1>{data.name}</h1>
-                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" />
+                (!data) ? "" : (
+                    <>
+                        <h1>{data.name}</h1>
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" />
                         <div className="habilidades">
-                            <div className="grupo">
-                                <h2>Blaze</h2>
-                            </div>
-                            <div className="grupo">
-                                <h2>solar-power</h2>
-                            </div>
+                            {
+                                data.abilities.map(poke => {
+                                    return (
+                                        <>
+                                            <div className="grupo">
+                                                <h2>{poke.ability.name}</h2>
+                                            </div>
+                                        </>
+                                    )
+                                })
+                            }
+
                         </div>
                         <div className="status">
-                            <div>
 
-                                <ProgressBar className="containerP" completed={30} customLabel="HP" />
-                                <ProgressBar className="containerP" completed={30} customLabel="Ataque" />
-                                <ProgressBar className="containerP" completed={30} customLabel="Defesa" />
-                                <ProgressBar className="containerP" completed={30} customLabel="Ataque especial" />
-                                <ProgressBar className="containerP" completed={30} customLabel="Velocidade" />
-
-                            </div>
+                            {
+                                data.stats.map(poke=>{
+                                    return(
+                                        <>
+                                        <ProgressBar className="containerP" completed={poke.base_stat} customLabel={poke.stat.name} />
+                                        </>
+                                    )
+                                })
+                            }
                         </div>
                     </>
                 )

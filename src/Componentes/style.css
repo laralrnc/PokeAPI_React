@@ -42,8 +42,8 @@ body {
 
 .lista-poke {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+    grid-gap:2rem;
 }
 
 .card-poke {
@@ -57,6 +57,7 @@ body {
 
 .card-poke img {
     margin: 2rem;
+    height: 180px;
 }
 
 .card-poke h1 {
