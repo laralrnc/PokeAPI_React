@@ -35,15 +35,16 @@ body {
     color: white;
     border-color: black;
 }
+
 .card:hover {
-    box-shadow: rgba(132,169,192,1) 0 1px 10px;
+    box-shadow: rgba(132, 169, 192, 1) 0 1px 10px;
     transition-duration: .1s;
 }
 
 .lista-poke {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
-    grid-gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+    grid-gap: 2rem;
 }
 
 .card-poke {
@@ -71,15 +72,15 @@ body {
     letter-spacing: 1px;
 }
 
-.habilidades{
+.habilidades {
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
-    border-color: black;
 }
-.habilidades .grupo{
+
+.habilidades .grupo {
     background-color: #84A9C0;
     color: white;
     padding: 0.5rem;
@@ -92,7 +93,7 @@ body {
 }
 
 .habilidades .grupo:hover {
-    box-shadow: rgba(132,169,192,1) 0 1px 10px;
+    box-shadow: rgba(132, 169, 192, 1) 0 1px 10px;
     transition-duration: .1s;
 }
 
@@ -136,10 +137,11 @@ body {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    
 }
 
 .btn-hover:hover {
-    box-shadow: rgba(221,216,184,1) 0 1px 10px;
+    box-shadow: rgba(221, 216, 184, 1) 0 1px 10px;
     transition-duration: .1s;
 }
 
@@ -150,8 +152,17 @@ body {
     }
 }
 
-  .containerP {
+.containerP {
     width: 90%;
     padding: 10px;
     margin-left: 15px;
-  }
+}
+
+.botãoPikachu {
+    width: '100%';
+    height: '100%';
+    margin-top: 0;
+    margin-left: '10%';
+    background-color: '#b4b2b2';
+    border-radius: '20px'
+}

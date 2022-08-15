@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const InfoPokemon = ({ data }) => {
+    const [contador, setContador] = useState(0);
+
+    function alterarImagem(pikachu) {//Recebemos dois valores por parâmetro.
+        document.getElementById(pikachu).src = 'https://i.imgur.com/BEdL5Xl.png';
+    }
+
     return (
         <>
             {
                 (!data) ? "" : (
                     <>
-                        <h1>{data.name}</h1>
-                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" />
+                        {data.name !== 'pikachu' ? (
+                            <h1>{data.name}</h1>
+                        ) : (
+
+                            <button className="btn-hover"
+                                onClick={alterarImagem}
+
+                            >
+
+                                Você clicou  vezes</button>
+
+
+
+
+                        )}
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" id='pikachu' />
                         <div className="habilidades">
                             {
                                 data.abilities.map(poke => {
@@ -26,10 +46,10 @@ const InfoPokemon = ({ data }) => {
                         <div className="status">
 
                             {
-                                data.stats.map(poke=>{
-                                    return(
+                                data.stats.map(poke => {
+                                    return (
                                         <>
-                                        <ProgressBar className="containerP" completed={poke.base_stat} customLabel={poke.stat.name} />
+                                            <ProgressBar className="containerP" completed={poke.base_stat} customLabel={poke.stat.name} />
                                         </>
                                     )
                                 })
