@@ -1,10 +1,16 @@
 import ProgressBar from "@ramonak/react-progress-bar";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const InfoPokemon = ({ data }) => {
   const [contador, setContador] = useState(0);
 
   const pokemonImage = contador >= 3 ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg` : 'https://i.imgur.com/ntFjCsD.png'
+
+  useEffect(() => {
+    if (contador >= 3) {
+      document.body.style.background = `url(${pokemonImage}) no-repeat`
+    }
+  }, [contador])
 
   return (
     <>
