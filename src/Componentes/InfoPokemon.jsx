@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 const InfoPokemon = ({ data }) => {
   const [contador, setContador] = useState(0);
 
-  const pokemonImage = contador >= 3 ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg` : 'https://i.imgur.com/ntFjCsD.png'
+  const pokemonImage = contador >= 3 ? 'https://i.imgur.com/iUDE7QO.png' :'https://i.imgur.com/ntFjCsD.png'  
 
   useEffect(() => {
     if (contador >= 3) {
@@ -29,7 +29,7 @@ const InfoPokemon = ({ data }) => {
               <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" />
 
             ) : (
-                  <img src={pokemonImage} alt="" id='pikachu' />
+                  <img src='https://i.imgur.com/ntFjCsD.png' alt="" id='pikachu' />
 
             )}
 
