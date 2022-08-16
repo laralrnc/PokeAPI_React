@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const InfoPokemon = ({ data }) => {
   const [contador, setContador] = useState(0);
 
-  const pokemonImage = contador >= 3 ? 'https://i.imgur.com/BEdL5Xl.png' : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`
+  const pokemonImage = contador >= 3 ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg` : 'https://i.imgur.com/BEdL5Xl.png'
 
   return (
     <>
@@ -13,15 +13,20 @@ const InfoPokemon = ({ data }) => {
           <>
             {data.name !== 'pikachu' ? (
               <h1>{data.name}</h1>
+
             ) : (
+              <a
+                onClick={() => setContador((c) => c + 1)}><h1>PIKACHU</h1></a>
 
-              <button className="btn-hover"
-                onClick={() => setContador((c) => c + 1)}>
-
-                --aqui exibi a quantidade de cliques só pra verificar se está contando certinho--
-                Você clicou {contador} vezes</button>
             )}
-            <img src={pokemonImage} alt="" id='pikachu' />
+            {data.name !== 'pikachu' ? (
+              <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" />
+
+            ) : (
+              <img src={pokemonImage} alt="" id='pikachu' />
+
+            )}
+
             <div className="habilidades">
               {
                 data.abilities.map(poke => {

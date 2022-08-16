@@ -8,6 +8,7 @@
 
 body {
     background-color: #6A66A3;
+
 }
 
 .container {
@@ -54,6 +55,7 @@ body {
     position: fixed;
     top: 100px;
     right: 10px;
+    
 }
 
 .card-poke img {
@@ -78,6 +80,7 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
+
 }
 
 .habilidades .grupo {
@@ -99,6 +102,7 @@ body {
 
 .status {
     margin-top: 2rem;
+    
 }
 
 .btn-page {
