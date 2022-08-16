@@ -8,7 +8,7 @@ const InfoPokemon = ({ data }) => {
 
   useEffect(() => {
     if (contador >= 3) {
-      document.body.style.background = `url(${pokemonImage}) no-repeat`
+      document.body.style.background = `url(${pokemonImage}) repeat`
     }
   }, [contador])
 
@@ -18,11 +18,11 @@ const InfoPokemon = ({ data }) => {
         (!data) ? "" : (
           <>
             {data.name !== 'pikachu' ? (
-              <h1>{data.name}</h1>
+              <h1 className='textoInfo'>{data.name}</h1>
 
             ) : (
               <a
-                onClick={() => setContador((c) => c + 1)}><h1>PIKACHU</h1></a>
+                onClick={() => setContador((c) => c + 1)}><h1 className='textoInfo'>PIKACHU</h1></a>
 
             )}
             {data.name !== 'pikachu' ? (
