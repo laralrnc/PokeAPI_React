@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const InfoPokemon = ({ data }) => {
   const [contador, setContador] = useState(0);
 
-  const pokemonImage = contador >= 3 ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg` : 'https://i.imgur.com/BEdL5Xl.png'
+  const pokemonImage = contador >= 3 ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg` : 'https://i.imgur.com/ntFjCsD.png'
 
   return (
     <>
@@ -23,7 +23,7 @@ const InfoPokemon = ({ data }) => {
               <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" />
 
             ) : (
-              <img src={pokemonImage} alt="" id='pikachu' />
+                  <img src={pokemonImage} alt="" id='pikachu' />
 
             )}
 
