@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Pokedex - Desafio FrontEnd - Iteris</h1 align="center">
   <p align="center">
-  <img src="https://i.imgur.com/2Izyorp.png" alt="Logo" width="700" align="center">
+  <img src="https://i.imgur.com/blJYApX.png" alt="Logo" width="700" align="center">
   </p>
   <p align="center">
   <a href="https://poke-api-react-olive.vercel.app/"> Acesse a aplicação </a> 
