@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-const Card = ({ pokemon, loading, PokeInfo }) => {
-    const [cont, setCont] = useState(0);
+import React from "react";
+// loading ? <h1>Carregando...</h1> : se o carregamento for verdadeiro a mensagem 
+//"Carregando..." é exibida para o usuário se for falso o card é exibido
 
-    const contClique = () => {
-        setCont(cont + 1);
-    };
+const Card = ({ pokemon, loading, PokeInfo }) => {
+
     return (
         <>
             {
